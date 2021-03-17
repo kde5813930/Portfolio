@@ -7,59 +7,164 @@
   <title>Doeun's Portfolio</title>
   <meta name="description" content="Portfolio for world-renowned software engineer Doeun">
   <meta name="author" content="Doeun">
-  <link rel="icon" type="img/png" href="img/logo.png">
+  <link rel="icon" type="img/png" href="img/icon.png">
   <script src="https://kit.fontawesome.com/e7083fffe3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="response.css">
   <script src="main.js" defer></script>
 
 </head>
 
 <body>
 
-  <nav id="navbar">
-    <div>
-      <ul>
-        <li class="navbar__menu__item"><a href="#">home</a></li>
-        <li class="navbar__menu__item"><a href="#">about</a></li>
-        <li class="navbar__menu__item"><a href="#">skills</a></li>
-        <li class="navbar__menu__item"><a href="#">project</a></li>
-        <li class="navbar__menu__item"><a href="#">testimonials</a></li>
-        <li class="navbar__menu__item"><a href="#">contect</a></li>
-      </ul>
-    </div>
-  </nav>
+  <section id="main__home">
+    <nav id="navbar">
 
-  <section id="home">
-    <img src="img/pr_1.jpg" alt="Doeun's portfolio photo" class="home_avatar">
-    <h1 class=" home__title">PRONT-END DEVELOPER & PUBLISHER</h1>
-    <h3 class="home__description">퍼블리셔 & 프론트엔드 개발자 Kim Doeun의 포트폴리오 입니다.</h3>
-    <button class="home__contact">Contact Me</button>
-  </section>
+      <div class="navbar__logo">
+        <i class="fas fa-cloud"></i>
+        <a href="#">Doeun</a>
+      </div>
 
-  <section id="about">
-    <h1>About me</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat voluptates odio quis voluptate quo deleniti
-      aliquid eaque harum dicta qui non eius, nobis alias provident nulla a libero at.</p>
-  </section>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active"><a href="#">home</a></li>
+          <li class="navbar__menu__item"><a href="#">about</a></li>
+          <li class="navbar__menu__item"><a href="#">skills</a></li>
+          <li class="navbar__menu__item"><a href="#">project</a></li>
+          <li class="navbar__menu__item"><a href="#">testimonials</a></li>
+          <li class="navbar__menu__item"><a href="#">contect</a></li>
+        </ul>
+      </div>
 
-  <section id="skills">
-    <h1>Skills</h1>
-    <h2>Skills & Attributes</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta nobis accusantium ad aperiam. Minima perferendis
-      explicabo, dicta id voluptatum voluptate dolor minus velit, porro, blanditiis ullam doloremque in dolorem!
-      Maiores.</p>
-    <div class="skillset">
-      <div class="skillset__detail">
-        <h3 class="skillset__title">Skills</h3>
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>90%</span>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="home">
+      <div class="home__produce">
+
+        <div class="home__slide">
+          <div class="home__slide__title">
+            <h1><i>성장하는</i></h1>
           </div>
-          <div class="skill_bar">
-            <div class="skill__value"></div>
+
+          <div class="home__slide__title">
+            <h1><i>발전하는</i></h1>
+          </div>
+
+          <div class="home__slide__title">
+            <h1><i>노력하는</i></h1>
+          </div>
+        </div>
+
+        <div class="home__title__box">
+          <h1 class=" home__title">김도은의 포트폴리오 입니다.</h1>
+        </div>
+
+      </div>
+
+      <span>
+        <h3 class="home__description">PRONT-END DEVELOPER & PUBLISHER</h3>
+      </span>
+      <button class="home__contact">Contact Me</button>
+    </div>
+  </section>
+
+  <section id="about" class="section section_container">
+    <span class="porpile"> <img src="img/pr_7.PNG" alt="Doeun's portfolio photo" class="home_avatar">
+    </span>
+    <span class="about__me">
+      <h1>About me</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat voluptates odio quis voluptate quo
+        deleniti
+        aliquid eaque harum dicta qui non eius, nobis alias provident nulla a libero at.</p>
+    </span>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section_container">
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta nobis accusantium ad aperiam. Minima
+        perferendis
+        explicabo, dicta id voluptatum voluptate dolor minus velit, porro, blanditiis ullam doloremque in dolorem!
+        Maiores.</p>
+      <div class="skillset" class="section">
+        <div class="skillset__detail">
+          <h3 class="skillset__title">Skills</h3>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>SCSS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>JABASCRIPT</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>REACT</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>VEU.JS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__description">
+              <span>NODE.JS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill_bar" class="section">
+              <div class="skill__value" style="width: 90%;"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -68,34 +173,88 @@
 
 
 
-  <section id="project">
+  <section id="my__project" class="section">
     <h1>My Projects</h1>
     <div class="work__categories">
-      <button class="category__btn">ALL<span class="category__count">8</span></button>
+      <button class="category__btn active">ALL<span class="category__count">8</span></button>
       <button class="category__btn">Project<span class="category__count">3</span></button>
       <button class="category__btn">how to study?<span class="category__count">5</span></button>
     </div>
 
     <div class="work_projects">
       <a href="#" class="project" target="_blank">
-        <img src="" alt="" class="project__image">
+        <img src="img/project1.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
-          <span>Clone coding with HTML and CSS</span>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project2.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project3.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project4.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project5.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project6.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project7.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
+        </div>
+      </a>
+      <a href="#" class="project" target="_blank">
+        <img src="img/project8.png" alt="" class="project__image">
+        <div class="project__description">
+          <h3>starbucks site</h3>
+          <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
 
     </div>
   </section>
 
-  <footer id="contect">
+  <footer id="contact" class="section">
     <h1 class="contact__title">Let's talk</h1>
     <h2 class="contact__email">kde5813@gmail.com</h2>
-    <a href="https://github.com/kde5813930" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
+    <div class="contact__links">
+      <a href="https://github.com/kde5813930" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
     <p class="contact__rights">2021 Doeun's Portfolio - All right reserved</p>
   </footer>
+
+  <script src="main.js"></script>
+
 </body>
 
 </html>
