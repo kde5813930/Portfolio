@@ -73,7 +73,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0px;
@@ -127,21 +127,63 @@ p {
   background-color: var(--color-dark-purple);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-light-white);
+  display: none;
+}
+
 /* #Home */
 
 #main__home {
-  background: url(img/homeBackround6.png) center/cover no-repeat;
+  background: url(img/homeBackround.png) center/cover no-repeat;
+  height: auto;
 }
 
 .home {
   padding: 70px;
   text-align: center;
+  margin: auto;
 }
 
-.home h1 {
-  margin-top: 135px;
+.home__produce {
+  margin-top: 120px;
+  display: inline-flex;
+  text-align: center;
 }
 
+.home__slide {
+  position: relative;
+  width: 162px;
+}
+
+.home__slide__title {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  z-index: 0;
+  opacity: 0;
+  transition: all 1.5s;
+  transform: scale(0.9);
+}
+
+.showing {
+  opacity: 1;
+  z-index: 1;
+  transition: all 3s ease-in-out;
+  transform: none;
+}
+
+.home__title__box {
+  margin-left: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.home__slide i,
 .home__title,
 .home__description {
   color: var(--color-white);
@@ -162,15 +204,17 @@ p {
 .section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+
+.section_container {
   max-width: 1200px;
   margin: auto;
 }
 
 #about {
-  padding: 50px;
   display: flex;
-  max-width: 1200px;
-  margin: auto;
+  text-align: left;
 }
 
 .home_avatar {
@@ -178,5 +222,167 @@ p {
   height: 300px;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
-  margin-right: 50px;
+  margin: 0 80px;
+}
+
+/* Skill */
+
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset {
+  background-color: var(--color--grey);
+  color: var(--color-light-white);
+  padding: 20px 40px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill_bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skill {
+  margin-bottom: 16px;
+}
+
+/* div는 안에 컨텐츠가 없기때문에 반드시 width랑 height를 지정해줘야한다 */
+
+/* work */
+
+.category__btn {
+  border: 1px solid var(--colror-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+  margin-bottom: 20px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+  transition: all .3s ease-in-out;
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+}
+
+.work_projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.project__image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .3s ease-in-out;
+}
+
+.project:hover .project__description {
+  opacity: .8;
+  transform: translateY(0px);
+}
+
+.project__description h3 {
+  color: var(--color-light-white);
+}
+
+.project__description h3::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: 8px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--colror-dark-white);
+}
+
+
+/* contect */
+
+#contact {
+  background-color: var(--color-purple);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-light-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: lemonchiffon;
+  transition: all .3s ease-in-out;
 }
