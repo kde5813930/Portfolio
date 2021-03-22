@@ -29,12 +29,11 @@
 
       <div class="navbar__menu">
         <ul class="navbar__menu">
-          <li class="navbar__menu__item active"><a href="#">home</a></li>
-          <li class="navbar__menu__item"><a href="#">about</a></li>
-          <li class="navbar__menu__item"><a href="#">skills</a></li>
-          <li class="navbar__menu__item"><a href="#">project</a></li>
-          <li class="navbar__menu__item"><a href="#">testimonials</a></li>
-          <li class="navbar__menu__item"><a href="#">contect</a></li>
+          <li class="navbar__menu__item active" data-link="#main__home">home</a></li>
+          <li class="navbar__menu__item" data-link="#about">about</a></li>
+          <li class="navbar__menu__item" data-link="#skills">skills</a></li>
+          <li class="navbar__menu__item" data-link="#my__project">project</a></li>
+          <li class="navbar__menu__item" data-link="#contact">contact</a></li>
         </ul>
       </div>
 
@@ -45,34 +44,38 @@
     </nav>
 
     <div class="home">
-      <div class="home__produce">
+      <div class="home__container">
 
-        <div class="home__slide">
-          <div class="home__slide__title">
-            <h1><i>성장하는</i></h1>
+        <div class="home__produce">
+
+          <div class="home__slide">
+            <div class="home__slide__title">
+              <h1><i>성장하는</i></h1>
+            </div>
+
+            <div class="home__slide__title">
+              <h1><i>발전하는</i></h1>
+            </div>
+
+            <div class="home__slide__title">
+              <h1><i>노력하는</i></h1>
+            </div>
           </div>
 
-          <div class="home__slide__title">
-            <h1><i>발전하는</i></h1>
-          </div>
-
-          <div class="home__slide__title">
-            <h1><i>노력하는</i></h1>
+          <div class="home__title__box">
+            <h1 class=" home__title">김도은의 포트폴리오 입니다.</h1>
           </div>
         </div>
 
-        <div class="home__title__box">
-          <h1 class=" home__title">김도은의 포트폴리오 입니다.</h1>
-        </div>
-
+        <span>
+          <h3 class="home__description">PRONT-END DEVELOPER & PUBLISHER</h3>
+        </span>
+        <button class="home__contact">Contact Me</button>
       </div>
-
-      <span>
-        <h3 class="home__description">PRONT-END DEVELOPER & PUBLISHER</h3>
-      </span>
-      <button class="home__contact">Contact Me</button>
     </div>
+
   </section>
+
 
   <section id="about" class="section section_container">
     <span class="porpile"> <img src="img/pr_7.PNG" alt="Doeun's portfolio photo" class="home_avatar">
@@ -176,62 +179,63 @@
   <section id="my__project" class="section">
     <h1>My Projects</h1>
     <div class="work__categories">
-      <button class="category__btn active">ALL<span class="category__count">8</span></button>
-      <button class="category__btn">Project<span class="category__count">3</span></button>
-      <button class="category__btn">how to study?<span class="category__count">5</span></button>
+      <button class="category__btn active" data-filter="*">ALL<span class=" category__count">8</span></button>
+      <button class="category__btn" data-filter="Project">Project<span class="category__count">3</span></button>
+      <button class="category__btn" data-filter="how to study?">how to study?<span
+          class="category__count">5</span></button>
     </div>
 
     <div class="work_projects">
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="Project">
         <img src="img/project1.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="Project">
         <img src="img/project2.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="how to study?">
         <img src="img/project3.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="how to study?">
         <img src="img/project4.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="Project">
         <img src="img/project5.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="how to study?">
         <img src="img/project6.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="Project">
         <img src="img/project7.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
           <span>Clone coding with HTML and CSS and jQeury</span>
         </div>
       </a>
-      <a href="#" class="project" target="_blank">
+      <a href="#" class="project" target="_blank" data-type="how to study?">
         <img src="img/project8.png" alt="" class="project__image">
         <div class="project__description">
           <h3>starbucks site</h3>
@@ -251,7 +255,14 @@
       </a>
     </div>
     <p class="contact__rights">2021 Doeun's Portfolio - All right reserved</p>
+
   </footer>
+
+  <a href="#main__home" class="arrow">
+    <span class="go__top">
+      <i class="fas fa-arrow-up"></i>
+    </span>
+  </a>
 
   <script src="main.js"></script>
 
