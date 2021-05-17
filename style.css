@@ -42,7 +42,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -92,7 +92,7 @@ h3 {
 
 p {
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 4px 0px;
 }
@@ -125,23 +125,26 @@ p {
 
 }
 
-.navbar__menu {
+.navbar__menu_container {
   display: flex;
 }
 
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
   cursor: pointer;
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-}
 
 .navbar__menu__item:hover {
+  border: 1px solid var(--color-white);
   background-color: var(--color-dark-purple);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__toggle-btn {
@@ -290,6 +293,12 @@ p {
   width: 100%;
   height: 3px;
   background-color: var(--color-orange);
+  animation: stack 2s 1;
+}
+
+@keyframes stack{
+  0% {width: 0;}
+  100% {width: 90%;}
 }
 
 .skill {
@@ -306,9 +315,10 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   margin-bottom: 20px;
+  position: relative;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-purple);
   color: var(--color-white);
@@ -329,9 +339,9 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
 }
 
@@ -389,7 +399,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-light-white);
+  color: var(--color-orange);
 }
 
 .project__description h3::after {
@@ -397,9 +407,9 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12.5px;
+  transform: translateX(-50%);
   margin-top: 8px;
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--colror-dark-white);
 }

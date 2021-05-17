@@ -1,4 +1,12 @@
 @media screen and (max-width:768px) {
+  :root {
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -6,16 +14,33 @@
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background: #c291ed;
+    z-index: 3;
+  }
+
+  #navbar.navbar__dark {
+    padding: 16px;
   }
 
   .navbar__menu {
-    flex-direction: column;
     text-align: center;
     width: 100%;
+  }
+
+  .navbar__menu_container {
+    flex-direction: column;
     display: none;
+  }
+
+  .navbar__menu_container.open {
+    display: block;
   }
 
   .project {
     flex-grow: 1;
+  }
+
+  .section {
+    padding: 16px;
   }
 }

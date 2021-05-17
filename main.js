@@ -112,16 +112,31 @@ navbar__menu.addEventListener('click', (event) => {
 });
 */
 
-const navbar__menu = document.querySelector('.navbar__menu');
-navbar__menu.addEventListener('click', (event) => {
+
+//toggle button
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+const navbarContainer = document.querySelector('.navbar__menu_container')
+navbarToggleBtn.addEventListener('click', () => {
+  navbarContainer.classList.toggle('open');
+});
+
+
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
   console.log(link);
   if (link == null) {
     return;
   }
+  navbarContainer.classList.remove('open');
   scrollIntoView(link);
 });
+
+
+
+
 
 
 const contactBtn = document.querySelector('.home__contact');
@@ -189,6 +204,15 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
+
+  //버튼 선택 
+
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target = e.target.nodeNmae === 'BUTTON' ? e.target : e.target.parentNode;
+  e.target.classList.add('selected');
+
+
   projectContainer.classList.add('anim-out');
 
   setTimeout(() => {
@@ -204,6 +228,35 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 300);
 
 
+  // 1. 모든 섹션 요소들을 메뉴 아이템들을 가지고 온다
+  // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
+  // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
 
+  const sectionIds = [
+    '#main__home',
+    '#about',
+    '#skills',
+    '#my__project',
+    '#contact',
+  ];
+
+  const sections = sectionIds.map(id => document.querySelector(id));
+  const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+  console.log(sections);
+  console.log(navItems);
+
+  const observerOption = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3,
+  }
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      console.log(entry.target);
+    })
+  }
+
+  const observer = new IntersectionObserver(observerCallback, observerOption);
+  sections.forEach(section => observer.observe(section));
 
 });
