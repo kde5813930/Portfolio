@@ -178,16 +178,28 @@ p {
   margin: auto;
 }
 
+.home__container {
+  width: 100%;
+  height: 100%;
+}
+
 .home__produce {
+  display: flex;
   margin-top: 120px;
   display: inline-flex;
   text-align: center;
+}
+
+.home__produce__container{
+  display: flex;
+  display: inline-flex;
 }
 
 .home__slide {
   position: relative;
   width: 162px;
 }
+
 
 .home__slide__title {
   position: absolute;
@@ -199,6 +211,7 @@ p {
   transform: scale(0.9);
 }
 
+
 .showing {
   opacity: 1;
   z-index: 1;
@@ -206,7 +219,7 @@ p {
   transform: none;
 }
 
-.home__title__box {
+.home__title__name {
   margin-left: 20px;
   position: relative;
   top: 0;
@@ -217,6 +230,10 @@ p {
 .home__title,
 .home__description {
   color: var(--color-white);
+}
+
+.home__title__portfolio {
+  margin-top: 120px;
 }
 
 .home__contact {
@@ -479,3 +496,4 @@ p {
   text-align: center;
   font-size: 25px;
 }
+

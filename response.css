@@ -1,3 +1,43 @@
+@media screen and (max-width:1020px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .profile {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .about__me {
+    text-align: center;
+  }
+
+  .home__produce__container{
+    display: block;
+  }
+
+  .home__title__box {
+    flex-direction: column;
+  }
+
+  .home__slide {
+    position: relative;
+  }
+
+  .home__slide__title {
+    position: absolute;
+    top: 0;
+    left:0;
+  }
+
+  .home__title__portfolio {
+    margin-top: 50px;
+  }
+  
+
+
+}
+
 @media screen and (max-width:768px) {
   :root {
     --font-large: 30px;
@@ -36,6 +76,7 @@
     display: block;
   }
 
+
   .project {
     flex-grow: 1;
   }
@@ -44,3 +85,5 @@
     padding: 16px;
   }
 }
+
+
