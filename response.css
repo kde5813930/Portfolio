@@ -1,4 +1,9 @@
 @media screen and (max-width:1020px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
   #about {
     flex-direction: column;
   }
@@ -22,6 +27,7 @@
 
   .home__slide {
     position: relative;
+    width: 120px;
   }
 
   .home__slide__title {
@@ -31,10 +37,9 @@
   }
 
   .home__title__portfolio {
-    margin-top: 50px;
+    margin-top: 0px;
   }
   
-
 
 }
 
@@ -81,9 +86,27 @@
     flex-grow: 1;
   }
 
+  .Nomflix__project {
+    flex-direction: column;
+  }
+
+  .carrot__project {
+    flex-direction: column-reverse;
+  }
+
   .section {
     padding: 16px;
   }
 }
 
 
+@media screen and (max-width:472px) {
+  .skills__categories span {
+    width: 100px;
+    height: 40px;
+  }
+
+  .skills__categories button {
+    font-size: 15px;
+  }
+}

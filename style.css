@@ -184,7 +184,6 @@ p {
 }
 
 .home__produce {
-  display: flex;
   margin-top: 120px;
   display: inline-flex;
   text-align: center;
@@ -279,93 +278,122 @@ p {
   margin: 0 80px;
 }
 
+
+
 /* Skill */
 
 #skills {
   background-color: var(--color-yellow);
 }
 
-.skillset__title {
-  color: var(--color-white);
+.skills__categories {
+  font-size: 20px;
+  margin: 20px 0 30px 0;
+}
+.skills__categories span {
+  width: 130px;
+  height: 40px;
+  display: inline-block;
+  background-color: #d09eff;
+  border-radius: 5px;
 }
 
-.skillset {
-  background-color: var(--color--grey);
-  color: var(--color-light-white);
-  padding: 20px 40px;
+.skills__categories span:hover{
+  background-color: #a145f7;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
-.skill__description {
+.skills__categories span:nth-child(2){
+  margin: 0 20px;
+}
+
+.skills__categories button{
+  font-size: 20px;
+  margin: auto;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+
+.skills__container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ebebe1;
+  padding: 40px 0px;
 }
 
-.skill_bar {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-grey);
+.skill__divide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.skill__value {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-orange);
-  animation: stack 2s 1;
+.skill__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
 }
 
-@keyframes stack{
-  0% {width: 0;}
-  100% {width: 90%;}
+.skill__title img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.skill {
-  margin-bottom: 16px;
-}
 
 /* div는 안에 컨텐츠가 없기때문에 반드시 width랑 height를 지정해줘야한다 */
 
+
+
 /* work */
 
-.category__btn {
-  border: 1px solid var(--colror-dark-white);
-  border-radius: var(--size-border-radius);
-  font-size: var(--font-regular);
-  padding: 8px 48px;
-  margin-bottom: 20px;
-  position: relative;
+.work_projects {
+  width: 100%;
+  height: 100%;
 }
 
-.category__btn.selected,
-.category__btn:hover {
-  background-color: var(--color-purple);
-  color: var(--color-white);
+.Nomflix__project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
 }
 
-.category__btn.active .category__count,
-.category__btn:hover .category__count {
-  opacity: 1;
-  top: 0;
-  transition: all .3s ease-in-out;
+.Nomflix__project .project h3 {
+  color:#f01636;
 }
 
-.category__count {
-  background-color: var(--color-orange);
-  border-radius: 50%;
-  color: var(--color-white);
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  display: inline-block;
-  position: absolute;
-  top: -20px;
-  right: 16px;
-  opacity: 0;
+.nomflix__desc {
+  margin-left: 25px;
 }
+
+.nomflix__desc h2 {
+  color: #f01636;
+}
+
+.carrot__project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrot__desc {
+  margin-right: 25px;
+}
+
+.carrot__desc h2 {
+  color: #fa922a;
+}
+
 
 .work_projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   opacity: 1;
   transition: all .3s ease-out;
 }
@@ -379,12 +407,12 @@ p {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 280px;
+  width: 350px;
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
 }
+
 
 .project.invisible {
   display: none;
@@ -423,6 +451,7 @@ p {
   content: "";
   display: block;
   position: relative;
+  z-index: 1;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 8px;
