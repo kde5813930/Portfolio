@@ -92,8 +92,7 @@
     <div class="about__me">
       <h1>About me</h1>
       <p>
-        안녕하세요 저는 김도은 이라고 합니다.<br>
-        과거에 여행사 항공 예약/발권 업무를 담당하여 항공시스템을 다루는 업무를 하였고,
+        과거에 저는 여행사 항공 예약/발권 업무를 담당하여 항공시스템을 다루는 업무를 담당 하였습니다.
         자연스레 시스템적인 부분에서 개발분야 동료들과 소통하며 개발직군에 대한 관심을 갖게되었습니다.
         개발자라는 직업은 쉽지않지만 오늘보다 나은 내일을 만들어가는 의미있는 직업이라고 생각합니다.
         저 또한 현실에 안주하지않고 진취적인 자세로 발전해 나가는 사람이 되고 싶습니다.
@@ -105,60 +104,56 @@
     <div class="section_container">
       <h1>Skills</h1>
       <div class="skills__categories">
-        <span><button class="categories__btn">All</button></span>
-        <span><button class="categories__btn">Famillar</button></span>
-        <span><button class="categories__btn">Experienced</button></span>
+        <span data-filter="*"><button class="categories__btn" data-filter="*">All</button></span>
+        <span data-filter="familar"><button class="categories__btn" data-filter="familar">Famillar</button></span>
+        <span data-filter="experienced"><button class="categories__btn" data-filter="experienced">Experienced</button></span>
       </div>
         
           <div class="skills__container">
-            <div class="skill__divide">
-              <div class="skill__title">
+              <div class="skill__title" data-type="familar">
                 <img src="skillsImg/html.png" alt="">
                 <span>HTML</span>
               </div>
             
-              <div class="skill__title">
+              <div class="skill__title" data-type="familar">
                 <img src="skillsImg/css.png" alt="">
                 <span>CSS</span>
               </div>
             
-              <div class="skill__title">
+              <div class="skill__title" data-type="experienced">
                 <img src="skillsImg/sass.png" alt="">
                 <span>Sass</span>
               </div>
 
-              <div class="skill__title">
+              <div class="skill__title" data-type="familar">
                 <img src="skillsImg/js.png" alt="">
                 <span>Javascript</span>
               </div>
             
-              <div class="skill__title">
+              <div class="skill__title" data-type="familar">
                 <img src="skillsImg/es6.PNG" alt="">
                 <span>ES6</span>
               </div>
-            </div>
           
-            <div class="skill__divide">
-              <div class="skill__title">
+              <div class="skill__title"  data-type="familar">
                 <img src="skillsImg/react.PNG" alt="">
                 <span>React</span>
               </div>
             
-              <div class="skill__title">
+              <div class="skill__title"  data-type="experienced">
                 <img src="skillsImg/react-hook.PNG" alt="">
                 <span>React Hook</span>
               </div>
             
-              <div class="skill__title">
+              <div class="skill__title"  data-type="experienced">
                 <img src="skillsImg/react_native.PNG" alt="">
                 <span>React Native</span>
               </div>
             
-              <div class="skill__title">
+              <div class="skill__title"  data-type="experienced">
                 <img src="skillsImg/typescript.png" alt="">
                 <span>Typescript</span>
               </div>
-            </div>
         </div>
       </div>
   </section>
@@ -208,7 +203,7 @@
   </section>
 
   <footer id="contact" class="section">
-    <h1 class="contact__title">Let's talk</h1>
+    <h1 class="contact__title">Contact</h1>
     <h2 class="contact__email">kde5813@gmail.com</h2>
     <div class="contact__links">
       <a href="https://github.com/kde5813930" target="_blank">

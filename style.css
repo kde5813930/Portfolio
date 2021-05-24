@@ -318,19 +318,14 @@ p {
 
 .skills__container {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   background-color: #ebebe1;
   padding: 40px 0px;
 }
 
-.skill__divide {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 20px;
+.skills__container.animate{
+  transition:all 1s ease-in-out;
 }
 
 .skill__title {
@@ -338,6 +333,10 @@ p {
   flex-direction: column;
   align-items: center;
   margin: 0 20px;
+}
+
+.skill__title.indivisual {
+  display:none;
 }
 
 .skill__title img {

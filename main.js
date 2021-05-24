@@ -111,74 +111,30 @@ function goTopArrow() {
 goTopArrow();
 
 
+//skils 필터링
 
-//projects
+const categories = document.querySelector(".skills__categories");
+const skillContainer = document.querySelector(".skills__container");
+const skillDivede = document.querySelector(".skill__divide");
+const skillTitle = document.querySelectorAll(".skill__title");
 
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work_projects');
-const projects = document.querySelectorAll('.project');
+categories.addEventListener("click", (e) => {
+  
+  const filter = e.target.dataset.filter;   
+  console.log(filter);
 
-workBtnContainer.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-
-  if (filter == null) {
+  if(filter == null){
     return;
   }
-
-  //버튼 선택 
-
-  const active = document.querySelector('.category__btn.selected');
-  active.classList.remove('selected');
-  const target = e.target.nodeNmae === 'BUTTON' ? e.target : e.target.parentNode;
-  e.target.classList.add('selected');
-
-
-  projectContainer.classList.add('anim-out');
-
-  setTimeout(() => {
-    projects.forEach((project) => {
-      console.log(project.dataset.type);
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
-
-
-  // 1. 모든 섹션 요소들을 메뉴 아이템들을 가지고 온다
-  // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
-  // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
-
-  const sectionIds = [
-    '#main__home',
-    '#about',
-    '#skills',
-    '#my__project',
-    '#contact',
-  ];
-
-  const sections = sectionIds.map(id => document.querySelector(id));
-  const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
-  console.log(sections);
-  console.log(navItems);
-
-  const observerOption = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3,
+  
+  for(let skill of skillTitle){
+    if(filter === "*" || filter === skill.dataset.type){
+      skill.classList.remove('indivisual');
+    }else{
+      skill.classList.add('indivisual');
+    }
   }
-  const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      console.log(entry.target);
-    })
-  }
-
-  const observer = new IntersectionObserver(observerCallback, observerOption);
-  sections.forEach(section => observer.observe(section));
-
 });
+
 
 
