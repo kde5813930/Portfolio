@@ -101,6 +101,22 @@
 
 
 @media screen and (max-width:472px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  
+  .home__slide {
+    width: 80px;
+  }
+
+  .home_avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+
   .skills__categories span {
     width: 100px;
     height: 40px;
@@ -110,3 +126,32 @@
     font-size: 15px;
   }
 }
+
+@media screen and (max-width:385px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .home__slide {
+    width: 75px;
+  }
+
+  .home_avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skills__categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills__categories span:nth-child(2){
+    margin:10px 0;
+  }
+
+
+}
+
