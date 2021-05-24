@@ -65,9 +65,6 @@ navbarMenu.addEventListener('click', (event) => {
 
 
 
-
-
-
 const contactBtn = document.querySelector('.home__contact');
 
 contactBtn.addEventListener('click', () => {
