@@ -56,6 +56,14 @@
     display: block;
   }
 
+  #navbar.navbar--dark {
+    color: blueviolet;
+  }
+
+  .navbar__logo i {
+    color: white;
+  }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -97,16 +105,44 @@
   .section {
     padding: 16px;
   }
+
+  .study__container button {
+    margin-top: 10px;
+  }
 }
 
+@media screen and (max-width:570px){
 
-@media screen and (max-width:472px) {
+  .study:nth-child(1),
+  .study:nth-child(3) 
+  {
+    margin-right: 20px;
+  }
 
+  .study img {
+    width: 170px;
+    height: 120px;
+  }
+
+  .study__divide:nth-child(1){
+    margin-bottom: 0px;
+  }
+  
+
+  
+}
+
+@media screen and (max-width:480px) {
+
+  .navbar__toggle-btn {
+    position: absolute;
+    right: 5px;
+  }
+  
   h1 {
     font-size: 20px;
   }
 
-  
   .home__slide {
     width: 80px;
   }
@@ -125,12 +161,41 @@
   .skills__categories button {
     font-size: 15px;
   }
+
+  .study__divide:nth-child(2){
+    margin-bottom: 0px;
+  }
+
+  .study:nth-child(1),
+  .study:nth-child(3) 
+  {
+    margin-right: 10px;
+  }
+
+  .study img {
+    width: 130px;
+    height: 80px;
+  }
+
+  .study .study__title {
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .study__container button {
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
-@media screen and (max-width:385px) {
+@media screen and (max-width:390px) {
 
   h1 {
     font-size: 18px;
+  }
+
+  .navbar__logo {
+    font-size: 20px;
   }
 
   .home__slide {
@@ -152,6 +217,45 @@
     margin:10px 0;
   }
 
+  .study__container {
+    padding: 20px 30px 100px 30px;
+    margin-top: 30px;
+  }
 
+  .study__content__wrap .study {
+    height: 100px;
+  }
+
+  .study__content__wrap .study:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .study__divide{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 250px;
+  }
+
+  .study:nth-child(1),
+  .study:nth-child(3) 
+  {
+    margin-right: 0px;
+  }
+
+  .study__divide:nth-child(1){
+    margin-bottom: 0px;
+  }
+  
+  .study .study__title {
+    display: block;
+    font-size: 10px;
+  }
+
+  .study__container button {
+    bottom: 25px;
+    padding: 10px 17px;
+    font-size: 13px;
+  }
 }
 

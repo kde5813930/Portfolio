@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <title>Doeun's Portfolio</title>
   <meta name="description" content="Portfolio for world-renowned software engineer Doeun">
   <meta name="author" content="Doeun">
@@ -12,29 +13,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="response.css">
   <script src="main.js" defer></script>
 
+  <!--[if lte IE 9]>
+      <script src="./js/lib/IE9.js"></script>
+  <![endif]-->
+  
+  <!--[if lte IE 8]>
+      <script src="./js/lib/html5shiv.min.js"></script>    
+      <script src="./js/lib/jqPIE.js"></script>    
+      <script src="./js/lib/PIE.js"></script> 
+      <link rel="stylesheet" type="text/css" href="./css/ie8.css">   
+  <![endif]-->
+  
+  <!--[if lte IE 7]>    
+    <link rel="stylesheet" type="text/css" href="./css/ie7.css">
+  <![endif]-->    
+
 </head>
 
 <body>
+  <ul id="skip">
+    <li><a href="#main__home" title="home 바로가기">home 바로가기</a></li>
+    <li><a href="#about" title="메인바로가기">메인 바로가기</a></li>
+    <li><a href="#contact" title="contact 바로가기">contact 바로가기</a></li>
+  </ul>
 
   <section id="main__home">
     <nav id="navbar">
 
       <div class="navbar__logo">
         <i class="fas fa-cloud"></i>
-        <a href="#">Doeun</a>
+        <a href="#" title="home 바로가기">Doeun</a>
       </div>
 
       <div class="navbar__menu">
         <ul class="navbar__menu_container">
-          <li class="navbar__menu__item active" data-link="#main__home">home</a></li>
-          <li class="navbar__menu__item" data-link="#about">about</a></li>
-          <li class="navbar__menu__item" data-link="#skills">skills</a></li>
-          <li class="navbar__menu__item" data-link="#my__project">project</a></li>
-          <li class="navbar__menu__item" data-link="#contact">contact</a></li>
+          <li class="navbar__menu__item" data-link="#main__home">
+            <a href="#main__home" title="home 바로가기">home</a>
+          </li>
+          <li class="navbar__menu__item" data-link="#about">
+            <a href="#about" title="about 바로가기">about</a>
+          </li>
+          <li class="navbar__menu__item" data-link="#skills">
+            <a href="#skills" title="skills 바로가기">skills</a>
+          </li>
+          <li class="navbar__menu__item" data-link="#my__project">
+            <a href="#my__project" title="my project 바로가기">project</a>
+          </li>
+          <li class="navbar__menu__item" data-link="#how__to__study">
+            <a href="#how__to__study" title="how to study 바로가기">study</a>
+          </li>
+          <li class="navbar__menu__item" data-link="#contact">
+            <a href="#contact" title="contact 바로가기">contact</a>
+          </li>
         </ul>
       </div>
 
@@ -66,7 +102,7 @@
             </div>
   
             <div class="home__title__name">
-              <h1 class=" home__title">김도은의&nbsp</h1>
+              <h1 class=" home__title">김도은의&nbsp;</h1>
             </div>
           </div>
   
@@ -76,9 +112,8 @@
 
         </div>
 
-        <span>
           <h3 class="home__description">PRONT-END DEVELOPER & PUBLISHER</h3>
-        </span>
+
         <button class="home__contact">Contact Me</button>
       </div>
     </div>
@@ -104,54 +139,60 @@
     <div class="section_container">
       <h1>Skills</h1>
       <div class="skills__categories">
-        <span data-filter="*"><button class="categories__btn" data-filter="*">All</button></span>
-        <span data-filter="familar"><button class="categories__btn" data-filter="familar">Famillar</button></span>
-        <span data-filter="experienced"><button class="categories__btn" data-filter="experienced">Experienced</button></span>
+        <span data-filter="*" tabindex="0"
+        ><button class="categories__btn" data-filter="*">All</button>
+      </span>
+        <span data-filter="familar" tabindex="0">
+          <button class="categories__btn" data-filter="familar">Famillar</button>
+        </span>
+        <span data-filter="experienced" tabindex="0">
+          <button class="categories__btn" data-filter="experienced">Experienced</button>
+        </span>
       </div>
         
           <div class="skills__container">
               <div class="skill__title" data-type="familar">
-                <img src="skillsImg/html.png" alt="">
+                <img src="skillsImg/html.png" alt="skills image">
                 <span>HTML</span>
               </div>
             
               <div class="skill__title" data-type="familar">
-                <img src="skillsImg/css.png" alt="">
+                <img src="skillsImg/css.png" alt="skills image">
                 <span>CSS</span>
               </div>
             
               <div class="skill__title" data-type="experienced">
-                <img src="skillsImg/sass.png" alt="">
+                <img src="skillsImg/sass.png" alt="skills image">
                 <span>Sass</span>
               </div>
 
               <div class="skill__title" data-type="familar">
-                <img src="skillsImg/js.png" alt="">
+                <img src="skillsImg/js.png" alt="skills image">
                 <span>Javascript</span>
               </div>
             
               <div class="skill__title" data-type="familar">
-                <img src="skillsImg/es6.png" alt="">
+                <img src="skillsImg/es6.png" alt="skills image">
                 <span>ES6</span>
               </div>
           
               <div class="skill__title"  data-type="familar">
-                <img src="skillsImg/react.png" alt="">
+                <img src="skillsImg/react.png" alt="skills image">
                 <span>React</span>
               </div>
             
               <div class="skill__title"  data-type="experienced">
-                <img src="skillsImg/react-hook.png" alt="">
+                <img src="skillsImg/react-hook.png" alt="skills image">
                 <span>React Hook</span>
               </div>
             
               <div class="skill__title"  data-type="experienced">
-                <img src="skillsImg/react_native.png" alt="">
+                <img src="skillsImg/react_native.png" alt="skills image">
                 <span>React Native</span>
               </div>
             
               <div class="skill__title"  data-type="experienced">
-                <img src="skillsImg/typescript.png" alt="">
+                <img src="skillsImg/typescript.png" alt="skills image">
                 <span>Typescript</span>
               </div>
         </div>
@@ -166,8 +207,8 @@
         <h1>Projects</h1>
 
         <div class="Nomflix__project">
-          <a href="https://kde5813930.github.io/Nomflix/" class="project" target="_blank" data-type="Project">
-            <img src="img/Nomflix.PNG" alt="" class="project__image">
+          <a href="https://kde5813930.github.io/Nomflix/" title="nomflix 홈페이지 바로가기" class="project" target="_blank" data-type="Project">
+            <img src="img/Nomflix.PNG" alt="nomflix image" class="project__image">
             <div class="project__description">
               <h3>Nomflix</h3>
               <span>Go to Page</span>
@@ -191,8 +232,8 @@
               (Clone coding with HTML and CSS and vanilaJs)
             </p>
           </div>
-          <a href="#" class="project" target="_blank" data-type="Project">
-            <img src="img/carrotGame.PNG" alt="" class="project__image">
+          <a href="https://kde5813930.github.io/carrot-game/" title="carrot game 홈페이지 바로가기" class="project" target="_blank" data-type="Project">
+            <img src="img/carrotGame.PNG" alt="game image" class="project__image">
             <div class="project__description">
               <h3>carrotGame</h3>
               <span>Go to Page</span>
@@ -202,11 +243,40 @@
       </div>
   </section>
 
+  <section id="how__to__study" class="section">
+    <h1>How to study?</h1>
+    <div class="study__container">
+      <div class="study__content__wrap">
+        <div class="study__divide">
+          <a href="https://do-eun.tistory.com/2" title="study 블로그 바로가기" target="blank" class="study">
+            <img src="./studyImg/process.PNG" alt="study img">
+            <span class="study__title">✍Process와<br>Multithread란?</span>
+          </a>
+          <a href="https://do-eun.tistory.com/3" title="study 블로그 바로가기" target="blank" class="study">
+            <img src="./studyImg/es6문법정리poster.PNG" alt="study img">
+            <span class="study__title">📗ES6&nbsp;<br>&nbsp;주요 문법 정리</span>
+          </a>
+        </div>
+        <div class="study__divide">
+          <a href="https://do-eun.tistory.com/4" title="study 블로그 바로가기" target="blank" class="study">
+            <img src="./studyImg/for문.PNG" alt="study img">
+            <span class="study__title">🙌forEach /<br> for of / for in 차이점</span>
+          </a>
+          <a href="https://do-eun.tistory.com/5" title="study 블로그 바로가기" target="blank" class="study">
+            <img src="./studyImg/모듈번들러.PNG" alt="study img">
+            <span class="study__title">🌈모듈 번들러와<br>&nbsp;Webpack</span>
+          </a>
+        </div>
+      </div>
+      <button onclick="window.open('https://do-eun.tistory.com/')" class="study__blog__btn">Learn More</button>
+    </div>
+  </section>
+
   <footer id="contact" class="section">
     <h1 class="contact__title">Contact</h1>
     <h2 class="contact__email">kde5813@gmail.com</h2>
     <div class="contact__links">
-      <a href="https://github.com/kde5813930" target="_blank">
+      <a href="https://github.com/kde5813930" target="_blank" title="github 바로가기">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -214,7 +284,7 @@
 
   </footer>
 
-  <a href="#main__home" class="arrow">
+  <a href="#main__home" class="arrow" title="home 바로가기">
     <span class="go__top">
       <i class="fas fa-arrow-up"></i>
     </span>

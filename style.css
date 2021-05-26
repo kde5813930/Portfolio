@@ -1,37 +1,4 @@
-/* global */
-:root {
-  --color-white: #ffffff;
-  --color-light-white: #eeeeee;
-  --colror-dark-white: #bdbdbd;
-  --color-purple: #c291ed;
-  --color-dark-purple: #995ecc;
-  --color-grey: #4d4d4d;
-  --color-dark-grey: #343837;
-  --color--grey: #616161;
-  --color-light-grey: #7c7979;
-  --color-blue: #73aace;
-  --color-yellow: #fff7d1;
-  --color-orange: #feb546;
-  --color-black: #000000;
-
-
-  /* font size */
-  --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
-
-  /* font weight */
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
-  --weight-regular: 400;
-
-  /* size */
-  --size-border-radius: 4px;
-}
-
-/* universal tags */
+/* commom */
 * {
   box-sizing: border-box;
 }
@@ -47,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 ul {
@@ -66,34 +33,31 @@ button {
   outline: none;
 }
 
-
-/* typography */
-
 h1 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
-  color: var(--color-black);
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
   margin: 16px 0px;
 }
 
 h2 {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
   margin: 8px 0px;
 }
 
 h3 {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
   margin: 8px 0px;
 }
 
 p {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
   margin: 4px 0px;
 }
 
@@ -114,14 +78,14 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--color-white);
+  color: #ffffff;
   padding: 16px;
   z-index: 1;
 }
 
 .navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
+  font-size: 28px;
+  font-weight: 600;
 
 }
 
@@ -133,30 +97,30 @@ p {
   padding: 8px 12px;
   margin: 0 4px;
   border: 1px solid transparent;
-  border-radius: var(--size-border-radius);
+  border-radius: 4px;
   cursor: pointer;
 }
 
 
 .navbar__menu__item:hover {
-  border: 1px solid var(--color-white);
-  background-color: var(--color-dark-purple);
+  border: 1px solid #ffffff;
+  background-color: #995ecc;
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid #ffffff;
 }
 
 .navbar__toggle-btn {
   position: absolute;
   right: 32px;
   font-size: 24px;
-  color: var(--color-light-white);
+  color: #eeeeee;
   display: none;
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-purple);
+  background-color: #c291ed;
   padding: 8px;
   height: 60px;
   transition: all .3s ease-in-out;
@@ -228,7 +192,7 @@ p {
 .home__slide i,
 .home__title,
 .home__description {
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 .home__title__portfolio {
@@ -236,20 +200,20 @@ p {
 }
 
 .home__contact {
-  color: var(--color-white);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-semi-bold);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
-  border-radius: var(--size-border-radius);
+  border: 2px solid #ffffff;
+  border-radius: 4px;
 }
 
 .home__contact:hover {
-  background-color: var(--color-light-white);
-  color: var(--color-purple);
+  background-color: #eeeeee;
+  color: #c291ed;
   transform: scale(1.1);
-  transition: all .5;
+  transition: all .3s ease-in-out;
 }
 
 /* section common */
@@ -274,8 +238,14 @@ p {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-white);
+  border: 2px solid #eeeeee;
   margin: 0 80px;
+}
+
+.about__me p {
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 
@@ -283,7 +253,7 @@ p {
 /* Skill */
 
 #skills {
-  background-color: var(--color-yellow);
+  background-color: #fff7d1;
 }
 
 .skills__categories {
@@ -405,7 +375,7 @@ p {
   width: 350px;
   height: 250px;
   margin: 2px;
-  background-color: var(--color-light-white);
+  background-color: #eeeeee;
 }
 
 
@@ -439,7 +409,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-orange);
+  color: #feb546;
 }
 
 .project__description h3::after {
@@ -452,20 +422,90 @@ p {
   margin-top: 8px;
   width: 50px;
   height: 2px;
-  background-color: var(--colror-dark-white);
+  background-color: #bdbdbd;
 }
+
+/* how to study */
+
+#how__to__study {
+  width: 100%;
+  height: 100%;
+  background-color:#fff7d1;
+}
+
+.study__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color:#ebebe1;
+  padding: 70px 50px;
+  margin-top: 50px;
+}
+
+.study__content__wrap .study {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.study__divide{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.study__divide{
+  margin-bottom: 50px;
+}
+
+.study img {
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+}
+
+.study img:hover {
+  opacity: .7;
+  transition: all .5s ease-in-out;
+}
+
+.study .study__title {
+  color: #4d4d4d;
+  font-weight: 600;
+}
+
+.study__container button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 13px 20px;
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  color: #ffef45;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.study__container button:hover {
+  background-color: #ffef45;
+  color: #4d4d4d;
+  transition: all .3s ease-in-out;
+}
+
+
 
 
 /* contect */
 
 #contact {
-  background-color: var(--color-purple);
+  background-color: #c291ed;
 }
 
 .contact__title,
 .contact__email,
 .contact__rights {
-  color: var(--color-light-white);
+  color: #eeeeee;
 }
 
 .contact__title {
@@ -473,7 +513,7 @@ p {
 }
 
 .contact__links {
-  font-size: var(--font-large);
+  font-size: 48px;
   margin: 24px;
 }
 
@@ -489,7 +529,7 @@ p {
 
 .go__top {
   opacity: 0;
-  background-color: var(--color-light-grey);
+  background-color: #7c7979;
   position: fixed;
   z-index: 2;
   bottom: 20px;
@@ -503,7 +543,7 @@ p {
 .go__top:hover {
   transform: scale(1.1);
   transition: all .3s ease-in-out;
-  background-color: var(--color-grey);
+  background-color: #4d4d4d;
 }
 
 
@@ -521,3 +561,33 @@ p {
   font-size: 25px;
 }
 
+/* 접근성 */
+
+#skip {
+  z-index:2;
+  position:absolute;
+  top:-16px;
+  left:0;
+  width:100%;
+}
+#skip li {
+  width:100%;
+}
+#skip li a {
+  display:block;
+  line-height:0;
+  font-size:0;
+  text-align:center;
+  background:#333;
+  color:#fff;
+}
+#skip li a:focus {
+  line-height:60px;
+  font-size:20px;
+}
+#wrap {
+  z-index:1;
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
