@@ -517,6 +517,10 @@ p {
   margin: 24px;
 }
 
+.contact__links i:nth-child(1) {
+  margin-right: 20px;
+}
+
 .contact__links i:hover {
   transform: scale(1.1);
   color: lemonchiffon;
