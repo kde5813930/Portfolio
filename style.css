@@ -468,6 +468,11 @@ p {
 .study img:hover {
   opacity: .7;
   transition: all .5s ease-in-out;
+  transform: scale(1.2);
+}
+
+.study:hover .study__title  {
+  color:#995ecc;
 }
 
 .study .study__title {
