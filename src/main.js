@@ -9,7 +9,7 @@ function titleSlideFn() {
 
   const currentSlide = document.querySelector(`.${showing_class}`);
 
-  if (currentSlide) { //document에 showing cls가 있을때
+  if (currentSlide) { 
     currentSlide.classList.remove(showing_class);
     const nextSlide = currentSlide.nextElementSibling;
     if (nextSlide) {
@@ -44,7 +44,6 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
-  console.log(link);
   if (link == null) {
     return;
   }
